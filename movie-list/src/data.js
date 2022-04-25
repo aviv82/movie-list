@@ -1,4 +1,4 @@
-export const data = [
+export const Data = [
   {
     Title: "Avatar",
     Year: "2009",
