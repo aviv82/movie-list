@@ -1,7 +1,7 @@
 import "./Title.css";
 
 export const Title = ({ details }) => {
-  return details.map((detail, index) => (
+  return details.Data.map((detail, index) => (
     <div key={index} className="thumb">
       <p key={index} className="title">
         {detail.Title}
