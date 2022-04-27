@@ -16,3 +16,33 @@ function App() {
 }
 
 export default App;
+
+/*
+return (
+    <Router>
+      <div className="App">
+        <Logo
+          handleHome={() => {
+            setMovieData(data);
+            Object.keys(movieDetail).forEach((key) => delete movieDetail[key]);
+            console.log("movieDetail:",movieDetail);
+          }}
+        />
+        <SearchBox
+          movieName={movieName}
+          handleChange={(e) => setMovieName(e.target.value)}
+          handleSearch={() => setMovieData(filteredData)}
+        />
+        <Routes>
+          <Route path="/" element={<Cards data={movieData} />} />
+          <Route
+            exact
+            path="/details"
+            element={<MovieDetails movie={movieDetail} />}
+          />
+        </Routes>
+      </div>
+    </Router>
+  );
+}
+*/
