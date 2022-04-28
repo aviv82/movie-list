@@ -1,17 +1,27 @@
 import "./App.css";
 import { useState } from "react";
-import { Data } from "./Data";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Data, MovieDetails } from "./Data";
 import { Title } from "./components/title/Title";
 import { Header } from "./components/header/Header";
+import { RenderDetails } from "./components/detail-page/RenderDetails";
 
 function App() {
   const [newData, setNewData] = useState({ Data });
-
+  const [movieData, newMovieData] = useState({ MovieDetails });
   return (
-    <div className="App">
-      <Header clickHandle={setNewData} />
-      <Title details={newData} />
-    </div>
+    <Router>
+      <div className="App">
+        <Header clickHandle={setNewData} />
+        <Routes>
+          <Route
+            path="/"
+            element={<Title details={newData} linkHandle={newMovieData} />}
+          />
+          <Route path="/details" element={<RenderDetails info={movieData} />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

@@ -1,3 +1,5 @@
+export const MovieDetails = {};
+
 export const Data = [
   {
     Title: "Avatar",
